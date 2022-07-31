@@ -12,7 +12,7 @@ _cat = {
 
 
 data = pd.read_csv("./emoji_tweets_cleaned.csv");
-data = data[: 100]
+# data = data[: 100]
 # print( data )
 
 
@@ -33,7 +33,8 @@ def classify( tag ):
 
 # get make classifications
 data['classify'] = data['hash_tags'].apply( classify )
-print( data)
+# print( data)
 # write data to file.
-# newData.to_csv( "./emoji_tweets_classified.csv", index=False )
+data.to_csv( "./emoji_tweets_classified.csv", index=False )
 
+print("......... done ............")
